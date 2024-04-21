@@ -1,0 +1,41 @@
+﻿<Window x:Class="PracticaFinal.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PracticaFinal"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" SizeChanged="Window_SizeChanged">
+    <Grid Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Button Name="botonAnadirVehiculo" Content="Añadir Vehículo" Margin="10" Grid.Column="0" Grid.ColumnSpan="2" Click="Button_Click"/>
+        <Button Name="botonAnadirRepostaje" Content="Añadir Repostaje" Margin="10" Grid.Column="2" Click="Button_Click_1" Grid.ColumnSpan="2"/>
+        <Button Name="botonAnadirGasto" Content="Añadir Otro Gasto" Margin="10" Grid.Column="4" Click="botonAnadirGasto_Click" Grid.ColumnSpan="2"/>
+        <Button Name="botonAnadirServicio" Content="Añadir Servicio" Margin="10" Grid.Column="6" Click="botonAnadirServicio_Click"  Grid.ColumnSpan="2"/>
+        <Button Name="botonVolverAtras" Content="Volver atrás" Margin="10" Grid.Column="0" Grid.ColumnSpan="2" Click="botonVerGrafico_Click"/>
+        <Button Name="botonGraficoOtrosGastos" Content="Gráfico Otros Gastos" Margin="10" Grid.Column="6" Grid.ColumnSpan="2" Click="botonGraficoOtrosGastos_Click"/>
+        <Button Name="botonGraficoRepostajes" Content="Gráfico Repostajes" Margin="10" Grid.Column="2" Grid.ColumnSpan="2" Click="botonGraficoRepostajes_Click"/>
+        <Button Name="botonGraficoServicios" Content="Gráfico Servicios" Margin="10" Grid.Column="4" Grid.ColumnSpan="2" Click="botonGraficoServicios_Click"/>
+        <Button Name="botonVerTablas" Content="Ver Tablas" Margin="10" Grid.Column="8" Grid.ColumnSpan="2" Click="botonVerTablas_Click"/>
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="8" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden">
+            <Canvas Name="lienzo" Width="550" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="8" Margin="0 10 0 50" Background="Beige"/>
+        </ScrollViewer>
+        <Canvas Name="lienzo2" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="10"/>
+    </Grid>
+</Window>
